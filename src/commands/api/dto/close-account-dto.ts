@@ -1,4 +1,4 @@
 
 export class CloseAccountDto {
-    public id: string
+    public accountNumber: string
 }

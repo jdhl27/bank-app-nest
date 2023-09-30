@@ -1,8 +1,7 @@
 import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
-import { OpenAccountCommand } from './open-account-command';
 import { CloseAccountCommand } from './close-account-command';
 
-@CommandHandler(OpenAccountCommand)
+@CommandHandler(CloseAccountCommand)
 export class CloseAccountHandlerService implements ICommandHandler<CloseAccountCommand>{
 
     execute(command: CloseAccountCommand): Promise<any> {

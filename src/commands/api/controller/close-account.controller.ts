@@ -13,7 +13,7 @@ export class CloseAccountController {
         try {
             await this.commandBus.execute(
                 new CloseAccountCommand(
-                    closeAccount.id
+                    closeAccount.accountNumber
 
                 )
             )
