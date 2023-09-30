@@ -4,6 +4,10 @@ import { AppService } from './app.service';
 import { ClientModule } from './client/client.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Client } from './client/domain/client';
+import { CommandsModule } from './commands/commands.module';
+import { CommonModule } from './common/common.module';
+import { CoreModule } from './core/core.module';
+import { QuerysModule } from './querys/querys.module';
 
 @Module({
   imports: [
@@ -16,6 +20,10 @@ import { Client } from './client/domain/client';
       entities: [Client],
       synchronize: true,
     }),
+    CommandsModule,
+    CommonModule,
+    CoreModule,
+    QuerysModule,
   ],
   controllers: [AppController],
   providers: [AppService],
