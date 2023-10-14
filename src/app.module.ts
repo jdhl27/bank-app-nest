@@ -8,10 +8,12 @@ import { CommandsModule } from './commands/commands.module';
 import { CommonModule } from './common/common.module';
 import { CoreModule } from './core/core.module';
 import { QuerysModule } from './querys/querys.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
     ClientModule,
+    MongooseModule.forRoot("mongodb://127.0.0.1:21071/eventStorage"),
     TypeOrmModule.forRoot({
       type: 'mongodb',
       host: '127.0.0.1',
